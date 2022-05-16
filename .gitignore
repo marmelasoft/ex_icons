@@ -10,4 +10,8 @@ erl_crash.dump
 /config/*.secret.exs
 .elixir_ls/
 
+# Icons Collections
+
+heroicons/
+iconic/
 
