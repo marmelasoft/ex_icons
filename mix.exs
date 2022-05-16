@@ -14,6 +14,7 @@ defmodule Icons.MixProject do
       description: @description,
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
+      package: package(),
       docs: docs(),
       deps: deps()
     ]
@@ -23,6 +24,13 @@ defmodule Icons.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/nelsonmestevao/icons"}
     ]
   end
 
