@@ -30,7 +30,7 @@ defmodule Icons.MixProject do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/nelsonmestevao/icons"}
+      links: %{"GitHub" => "https://github.com/nelsonmestevao/ex_icons"}
     ]
   end
 
