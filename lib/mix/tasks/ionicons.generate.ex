@@ -1,27 +1,27 @@
-defmodule Mix.Tasks.Heroicons.Generate do
+defmodule Mix.Tasks.Ionicons.Generate do
   @moduledoc """
-  Generate Heroicons components.
+  Generate Ionicons components.
 
-  1. Clone heroicons project.
+  1. Clone Ionicons project.
 
-      $ git clone https://github.com/tailwindlabs/heroicons.git
+      $ git clone https://github.com/ionic-team/ionicons
 
   2. Run the task.
 
-      $ mix heroicons.generate
+      $ mix ionicons.generate
   """
   use Mix.Task
 
-  @shortdoc "Convert source SVG files into HEEX components. Run `git clone https://github.com/tailwindlabs/heroicons.git` first."
+  @shortdoc "Convert source SVG files into HEEX components. Run `git clone https://github.com/ionic-team/ionicons` first."
   def run(_) do
-    Enum.each(["outline", "solid"], &loop_directory/1)
+    Enum.each(["outline", "filled", "sharp"], &loop_by_type/1)
 
     Mix.Task.run("format")
   end
 
-  defp loop_directory(folder) do
-    src_path = "./heroicons/optimized/#{folder}/"
-    namespace = "Heroicons.#{String.capitalize(folder)}"
+  defp loop_by_type(type) do
+    src_path = "./ionicons/src/svg/"
+    namespace = "Ionicons.#{String.capitalize(type)}"
 
     file_content = """
     defmodule Icons.#{namespace} do
@@ -30,8 +30,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
 
       ### Examples
 
-        <Icons.Heroicons.#{namespace}.home class="w-6 h-6" />
-        <Icons.Heroicons.#{namespace}.render icon="home" class="w-6 h-6" />
+        <Icons.#{namespace}.home class="w-6 h-6" />
+        <Icons.#{namespace}.render icon="home" class="w-6 h-6" />
 
       \"\"\"
       use Phoenix.Component
@@ -45,7 +45,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
       src_path
       |> File.ls!()
       |> Enum.filter(&(Path.extname(&1) == ".svg"))
-      |> Enum.map_join("\n\n", &create_component(src_path, &1))
+      |> Enum.filter(&String.ends_with?(&1, "-#{type}.svg"))
+      |> Enum.map_join("\n\n", &create_component(src_path, type, &1))
 
     file_content =
       file_content <>
@@ -54,33 +55,34 @@ defmodule Mix.Tasks.Heroicons.Generate do
         end
         """
 
-    dest_path = "./lib/icons/heroicons/#{folder}.ex"
+    dest_path = "./lib/icons/ionicons/#{type}.ex"
 
     unless File.exists?(dest_path) do
-      File.mkdir_p("./lib/icons/heroicons")
+      File.mkdir_p("./lib/icons/ionicons")
     end
 
     File.write!(dest_path, file_content)
   end
 
-  defp create_component(src_path, filename) do
+  defp create_component(src_path, type, filename) do
     svg_content =
       File.read!(Path.join(src_path, filename))
       |> String.trim()
       |> String.replace(~r/<svg /, "<svg class={@class} {@extra_attributes} ")
 
-    build_component(filename, svg_content)
+    build_component(filename, type, svg_content)
   end
 
-  defp function_name(current_filename) do
+  defp function_name(current_filename, type) do
     current_filename
     |> Path.basename(".svg")
+    |> String.replace("-#{type}", "")
     |> String.replace("-", "_")
   end
 
-  defp build_component(filename, svg) do
+  defp build_component(filename, type, svg) do
     """
-    def #{function_name(filename)}(assigns) do
+    def #{function_name(filename, type)}(assigns) do
       assigns = assigns
         |> assign_new(:class, fn -> "h-6 w-6" end)
         |> assign_new(:extra_attributes, fn -> assigns_to_attributes(assigns, [:class]) end)
