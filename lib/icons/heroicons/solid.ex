@@ -4,8 +4,8 @@ defmodule Icons.Heroicons.Solid do
 
   ### Examples
 
-    <Icons.Heroicons.Heroicons.Solid.home class="w-6 h-6" />
-    <Icons.Heroicons.Heroicons.Solid.render icon="home" class="w-6 h-6" />
+    <Icons.Heroicons.Solid.home class="w-6 h-6" />
+    <Icons.Heroicons.Solid.render icon="home" class="w-6 h-6" />
   """
   use Phoenix.Component
 

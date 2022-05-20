@@ -4,8 +4,8 @@ defmodule Icons.FontAwesome.Regular do
 
   ### Examples
 
-    <Icons.FontAwesome.FontAwesome.Regular.home class="w-6 h-6" />
-    <Icons.FontAwesome.FontAwesome.Regular.render icon="home" class="w-6 h-6" />
+    <Icons.FontAwesome.Regular.home class="w-6 h-6" />
+    <Icons.FontAwesome.Regular.render icon="home" class="w-6 h-6" />
 
   """
   use Phoenix.Component

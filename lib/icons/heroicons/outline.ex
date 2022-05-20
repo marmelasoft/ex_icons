@@ -4,8 +4,8 @@ defmodule Icons.Heroicons.Outline do
 
   ### Examples
 
-    <Icons.Heroicons.Heroicons.Outline.home class="w-6 h-6" />
-    <Icons.Heroicons.Heroicons.Outline.render icon="home" class="w-6 h-6" />
+    <Icons.Heroicons.Outline.home class="w-6 h-6" />
+    <Icons.Heroicons.Outline.render icon="home" class="w-6 h-6" />
 
   """
   use Phoenix.Component

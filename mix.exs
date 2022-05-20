@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.2.1"
+  @version "0.2.2"
   @description "Beautiful SVG icons collections"
 
   def project do

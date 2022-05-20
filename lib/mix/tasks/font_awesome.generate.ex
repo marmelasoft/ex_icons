@@ -30,8 +30,8 @@ defmodule Mix.Tasks.FontAwesome.Generate do
 
       ### Examples
 
-        <Icons.FontAwesome.#{namespace}.home class="w-6 h-6" />
-        <Icons.FontAwesome.#{namespace}.render icon="home" class="w-6 h-6" />
+        <Icons.#{namespace}.home class="w-6 h-6" />
+        <Icons.#{namespace}.render icon="home" class="w-6 h-6" />
 
       \"\"\"
       use Phoenix.Component

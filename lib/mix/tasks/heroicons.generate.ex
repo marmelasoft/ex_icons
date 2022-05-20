@@ -30,8 +30,8 @@ defmodule Mix.Tasks.Heroicons.Generate do
 
       ### Examples
 
-        <Icons.Heroicons.#{namespace}.home class="w-6 h-6" />
-        <Icons.Heroicons.#{namespace}.render icon="home" class="w-6 h-6" />
+        <Icons.#{namespace}.home class="w-6 h-6" />
+        <Icons.#{namespace}.render icon="home" class="w-6 h-6" />
 
       \"\"\"
       use Phoenix.Component

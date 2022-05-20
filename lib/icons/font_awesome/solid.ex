@@ -4,8 +4,8 @@ defmodule Icons.FontAwesome.Solid do
 
   ### Examples
 
-    <Icons.FontAwesome.FontAwesome.Solid.home class="w-6 h-6" />
-    <Icons.FontAwesome.FontAwesome.Solid.render icon="home" class="w-6 h-6" />
+    <Icons.FontAwesome.Solid.home class="w-6 h-6" />
+    <Icons.FontAwesome.Solid.render icon="home" class="w-6 h-6" />
 
   """
   use Phoenix.Component

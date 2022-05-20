@@ -4,8 +4,8 @@ defmodule Icons.FontAwesome.Brands do
 
   ### Examples
 
-    <Icons.FontAwesome.FontAwesome.Brands.home class="w-6 h-6" />
-    <Icons.FontAwesome.FontAwesome.Brands.render icon="home" class="w-6 h-6" />
+    <Icons.FontAwesome.Brands.home class="w-6 h-6" />
+    <Icons.FontAwesome.Brands.render icon="home" class="w-6 h-6" />
 
   """
   use Phoenix.Component
