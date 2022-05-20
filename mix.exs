@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.6.0"
+  @version "0.6.1"
   @description "Icons collections as HEEX components"
 
   def project do
@@ -30,7 +30,7 @@ defmodule Icons.MixProject do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/nelsonmestevao/ex_icons"}
+      links: %{"GitHub" => "https://github.com/marmelasoft/ex_icons"}
     ]
   end
 
