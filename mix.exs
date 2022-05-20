@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.2.3"
+  @version "0.3.0"
   @description "Icons collections as HEEX components"
 
   def project do
