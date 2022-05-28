@@ -6,6 +6,7 @@ defmodule Icons.Heroicons.Solid do
 
     <Icons.Heroicons.Solid.home class="w-6 h-6" />
     <Icons.Heroicons.Solid.render icon="home" class="w-6 h-6" />
+
   """
   use Phoenix.Component
 
@@ -292,7 +293,6 @@ defmodule Icons.Heroicons.Solid do
     """
   end
 
-  @spec folder_remove(map) :: Phoenix.LiveView.Rendered.t()
   def folder_remove(assigns) do
     assigns =
       assigns
