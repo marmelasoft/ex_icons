@@ -22,10 +22,7 @@ defmodule Icons.Ionicons.Outline do
 
     ~H"""
     <svg class={@class} fill="currentColor" {@extra_attributes} xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-      <path
-        d="M448,341.37V170.61A32,32,0,0,0,432.11,143l-152-88.46a47.94,47.94,0,0,0-48.24,0L79.89,143A32,32,0,0,0,64,170.61V341.37A32,32,0,0,0,79.89,369l152,88.46a48,48,0,0,0,48.24,0l152-88.46A32,32,0,0,0,448,341.37Z"
-        style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px"
-      />
+      <path d="M448,341.37V170.61A32,32,0,0,0,432.11,143l-152-88.46a47.94,47.94,0,0,0-48.24,0L79.89,143A32,32,0,0,0,64,170.61V341.37A32,32,0,0,0,79.89,369l152,88.46a48,48,0,0,0,48.24,0l152-88.46A32,32,0,0,0,448,341.37Z" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
       <polyline points="69 153.99 256 263.99 443 153.99" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
       <line x1="256" y1="463.99" x2="256" y2="263.99" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
     </svg>
@@ -141,10 +138,7 @@ defmodule Icons.Ionicons.Outline do
 
     ~H"""
     <svg class={@class} fill="currentColor" {@extra_attributes} xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-      <path
-        d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z"
-        style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px"
-      />
+      <path d="M255.66,112c-77.94,0-157.89,45.11-220.83,135.33a16,16,0,0,0-.27,17.77C82.92,340.8,161.8,400,255.66,400,348.5,400,429,340.62,477.45,264.75a16.14,16.14,0,0,0,0-17.47C428.89,172.28,347.8,112,255.66,112Z" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
       <circle cx="256" cy="256" r="80" style="fill:none;fill:#000;fill-miterlimit:10;fill-width:32px" />
     </svg>
     """
@@ -4879,10 +4873,7 @@ defmodule Icons.Ionicons.Outline do
     ~H"""
     <svg class={@class} fill="currentColor" {@extra_attributes} xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
       <path d="M320,254.27c-4.5,51-40.12,80-80.55,80s-67.34-35.82-63.45-80,37.12-80,77.55-80S323.88,210.27,320,254.27Z" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
-      <path
-        d="M319.77,415.77c-28.56,12-47.28,14.5-79.28,14.5-97.2,0-169-78.8-160.49-176s94.31-176,191.51-176C381,78.27,441.19,150,432.73,246c-6.31,71.67-52.11,92.32-76.09,88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25"
-        style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px"
-      />
+      <path d="M319.77,415.77c-28.56,12-47.28,14.5-79.28,14.5-97.2,0-169-78.8-160.49-176s94.31-176,191.51-176C381,78.27,441.19,150,432.73,246c-6.31,71.67-52.11,92.32-76.09,88.07-22.56-4-41.18-24.42-37.74-63.5l8.48-96.25" style="fill:none;fill:#000;fill-linecap:round;fill-linejoin:round;fill-width:32px" />
     </svg>
     """
   end
@@ -6458,14 +6449,7 @@ defmodule Icons.Ionicons.Outline do
 
     ~H"""
     <svg class={@class} fill="currentColor" {@extra_attributes} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path
-        fill="none"
-        fill="#000"
-        fill-linecap="round"
-        fill-linejoin="round"
-        fill-width="32"
-        d="M448,341.37V170.61A32,32,0,0,0,432.11,143l-152-88.46a47.94,47.94,0,0,0-48.24,0L79.89,143A32,32,0,0,0,64,170.61V341.37A32,32,0,0,0,79.89,369l152,88.46a48,48,0,0,0,48.24,0l152-88.46A32,32,0,0,0,448,341.37Z"
-      />
+      <path fill="none" fill="#000" fill-linecap="round" fill-linejoin="round" fill-width="32" d="M448,341.37V170.61A32,32,0,0,0,432.11,143l-152-88.46a47.94,47.94,0,0,0-48.24,0L79.89,143A32,32,0,0,0,64,170.61V341.37A32,32,0,0,0,79.89,369l152,88.46a48,48,0,0,0,48.24,0l152-88.46A32,32,0,0,0,448,341.37Z" />
       <polyline fill="none" fill="#000" fill-linecap="round" fill-linejoin="round" fill-width="32" points="69 153.99 256 263.99 443 153.99" />
       <line fill="none" fill="#000" fill-linecap="round" fill-linejoin="round" fill-width="32" x1="256" y1="463.99" x2="256" y2="263.99" />
       <ellipse cx="256" cy="152" rx="24" ry="16" />

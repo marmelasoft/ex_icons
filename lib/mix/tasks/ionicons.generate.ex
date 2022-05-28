@@ -118,7 +118,10 @@ defmodule Mix.Tasks.Ionicons.Generate do
     svg_content =
       File.read!(Path.join(src_path, filename))
       |> String.trim()
-      |> String.replace(~r/<svg /, "<svg class={@class} {@extra_attributes} fill=\"currentColor\" ")
+      |> String.replace(
+        ~r/<svg /,
+        "<svg class={@class} {@extra_attributes} fill=\"currentColor\" "
+      )
 
     build_component(filename, type, svg_content)
   end
