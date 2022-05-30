@@ -1,6 +1,6 @@
 # Icons
 
-**TODO: Add description**
+Collections of SVG Icons provided as HEEX components for Phoenix apps.
 
 ## Installation
 
@@ -10,7 +10,7 @@ by adding `icons` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:icons, "~> 0.6.0"}
+    {:icons, "~> 0.7.2"}
   ]
 end
 ```

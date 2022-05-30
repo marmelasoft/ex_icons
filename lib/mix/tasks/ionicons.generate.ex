@@ -46,8 +46,7 @@ defmodule Mix.Tasks.Ionicons.Generate do
     functions_content =
       src_path
       |> File.ls!()
-      |> Enum.filter(&(Path.extname(&1) == ".svg"))
-      |> Enum.filter(&String.ends_with?(&1, "-#{type}.svg"))
+      |> Enum.filter(&(Path.extname(&1) == ".svg" and String.ends_with?(&1, "-#{type}.svg")))
       |> Enum.map_join("\n\n", &create_component(src_path, type, &1))
 
     file_content =
@@ -66,7 +65,7 @@ defmodule Mix.Tasks.Ionicons.Generate do
     File.write!(dest_path, file_content)
   end
 
-  defp build_filled() do
+  defp build_filled do
     src_path = "./ionicons/src/svg/"
     namespace = "Ionicons.Filled"
     type = "filled"
@@ -92,9 +91,9 @@ defmodule Mix.Tasks.Ionicons.Generate do
     functions_content =
       src_path
       |> File.ls!()
-      |> Enum.filter(&(Path.extname(&1) == ".svg"))
       |> Enum.filter(fn x ->
-        not String.ends_with?(x, "-outline.svg") and not String.ends_with?(x, "-sharp.svg")
+        Path.extname(&1) == ".svg" and not String.ends_with?(x, "-outline.svg") and
+          not String.ends_with?(x, "-sharp.svg")
       end)
       |> Enum.map_join("\n\n", &create_component(src_path, type, &1))
 
