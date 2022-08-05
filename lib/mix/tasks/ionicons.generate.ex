@@ -92,7 +92,7 @@ defmodule Mix.Tasks.Ionicons.Generate do
       src_path
       |> File.ls!()
       |> Enum.filter(fn x ->
-        Path.extname(&1) == ".svg" and not String.ends_with?(x, "-outline.svg") and
+        Path.extname(x) == ".svg" and not String.ends_with?(x, "-outline.svg") and
           not String.ends_with?(x, "-sharp.svg")
       end)
       |> Enum.map_join("\n\n", &create_component(src_path, type, &1))
