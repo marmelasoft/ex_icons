@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.7.2"
+  @version "0.8.0"
   @description "Icons collections as HEEX components"
 
   def project do
@@ -13,6 +13,7 @@ defmodule Icons.MixProject do
       version: @version,
       description: @description,
       elixir: "~> 1.13",
+      elixirc_paths: elixirc_paths(),
       start_permanent: Mix.env() == :prod,
       package: package(),
       docs: docs(),
@@ -20,12 +21,26 @@ defmodule Icons.MixProject do
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
       extra_applications: [:logger]
     ]
   end
+
+  defp elixirc_paths() do
+    Application.get_env(:icons, :collection, :heroicons)
+    |> elixirc_paths()
+  end
+
+  defp elixirc_paths(libraries) when is_list(libraries) do
+    libraries
+    |> Enum.reduce([], fn set, paths -> elixirc_paths(set) ++ paths end)
+  end
+
+  defp elixirc_paths(:font_awesome), do: ["lib/icons/font_awesome"]
+  defp elixirc_paths(:heroicons), do: ["lib/icons/heroicons"]
+  defp elixirc_paths(:ionicons), do: ["lib/icons/ionicons"]
+  defp elixirc_paths(:bootstrap), do: ["lib/icons/bootstrap"]
 
   defp package do
     [
