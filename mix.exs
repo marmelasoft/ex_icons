@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.9.0"
+  @version "0.9.1"
   @description "Icons collections as HEEX components"
 
   def project do
@@ -28,7 +28,7 @@ defmodule Icons.MixProject do
   end
 
   defp elixirc_paths() do
-    Application.get_env(:icons, :collection, Heroicons)
+    Application.get_env(:icons, :collection, [Bootstrap, FontAwesome, Heroicons, Ionicons])
     |> elixirc_paths()
   end
 
