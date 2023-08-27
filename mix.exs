@@ -3,7 +3,7 @@ defmodule Icons.MixProject do
 
   @app :icons
   @name "Icons"
-  @version "0.9.1"
+  @version "0.10.0"
   @description "Icons collections as HEEX components"
 
   def project do
@@ -61,7 +61,7 @@ defmodule Icons.MixProject do
   defp deps do
     [
       {:phoenix_html, "~> 3.2"},
-      {:phoenix_live_view, "~> 0.17.0"},
+      {:phoenix_live_view, "~> 0.19"},
 
       # tools
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
