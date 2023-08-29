@@ -10,7 +10,7 @@ by adding `icons` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:icons, "~> 0.9"}
+    {:icons, "~> 0.11"}
   ]
 end
 ```
