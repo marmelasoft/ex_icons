@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Heroicons.Generate do
   end
 
   defp loop_directory(folder) do
-    src_path = "./heroicons/optimized/#{folder}/"
+    src_path = "./heroicons/optimized/24/#{folder}/"
     namespace = "Heroicons.#{String.capitalize(folder)}"
 
     file_content = """

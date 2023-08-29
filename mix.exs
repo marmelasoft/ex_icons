@@ -12,7 +12,7 @@ defmodule Icons.MixProject do
       name: @name,
       version: @version,
       description: @description,
-      elixir: "~> 1.13",
+      elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(),
       start_permanent: Mix.env() == :prod,
       package: package(),
